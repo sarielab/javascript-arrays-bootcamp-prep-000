@@ -2,85 +2,13 @@ var chocolateBars = ['snickers', 'hundred grand', 'kitkat', 'skittles']
 var addElementToBeginningOfArray = (arr, el) => [el, ...arr]
 var destructivelyAddElementToBeginningOfArray = (arr, el) => arr.unshift(el)
 var addElementToEndOfArray = (arr, el) => [...arr, el]
-
+var destructivelyAddElementToEndOfArray = (arr, el) => arr.push(el)
+var accessElementInArray = (arr, el) => arr[el]
+var destructivelyRemoveElementFromBeginningOfArray = (arr, el) => arr.shift()
+var des
 /*
 ('arrays', () => {
   
-
-  describe('addElementToBeginningOfArray(array, element)', () => {
-    it('adds an element to the beginning of an array', () => {
-      expect(addElementToBeginningOfArray([1], 'foo')).to.eql(['foo', 1])
-    })
-
-    it('does not alter the original array', () => {
-      const array = [1]
-
-      addElementToBeginningOfArray(array, 'foo')
-
-      expect(array).to.eql([1])
-    })
-  })
-
-  describe('destructivelyAddElementToBeginningOfArray(array, element)', () => {
-    it('adds an element to the beginning of an array', () => {
-      expect(destructivelyAddElementToBeginningOfArray([1], 'foo')).to.eql(['foo', 1])
-    })
-
-    it('alters the original array', () => {
-      const array = [1]
-
-      destructivelyAddElementToBeginningOfArray(array, 'foo')
-
-      expect(array).to.eql(['foo', 1])
-    })
-  })
-
-  describe('addElementToEndOfArray(array, element)', () => {
-    it('adds an element to the end of an array', () => {
-      expect(addElementToEndOfArray([1], 'foo')).to.eql([1, 'foo'])
-    })
-
-    it('does not alter the original array', () => {
-      const array = [1]
-
-      addElementToEndOfArray(array, 'foo')
-
-      expect(array).to.eql([1])
-    })
-  })
-
-  describe('destructivelyAddElementToEndOfArray(array, element)', () => {
-    it('adds an element to the end of an array', () => {
-      expect(destructivelyAddElementToEndOfArray([1], 'foo')).to.eql([1, 'foo'])
-    })
-
-    it('alters the original array', () => {
-      const array = [1]
-
-      destructivelyAddElementToEndOfArray(array, 'foo')
-
-      expect(array).to.eql([1, 'foo'])
-    })
-  })
-
-  describe('accessElementInArray(array, index)', () => {
-    it('accesses the element in array at the given index', () => {
-      expect(accessElementInArray([1, 2, 3], 2)).to.equal(3)
-    })
-  })
-  
-  describe('destructivelyRemoveElementFromBeginningOfArray(array)', ()=>{
-    it('returns the array with the first element removed', () => {
-      expect(destructivelyRemoveElementFromBeginningOfArray([1, 2, 3])).to.eql([2, 3])
-    })
-    
-    it('alters the original array', ()=>{
-      const array = [1, 2, 3];
-      destructivelyRemoveElementFromBeginningOfArray(array);
-      expect(array).to.eql([2, 3]);
-    })
-  })
-
   describe('removeElementFromBeginningOfArray(array)', () => {
     it('removes the first element from the array', () => {
       expect(removeElementFromBeginningOfArray([1, 2, 3])).to.eql([2, 3])
