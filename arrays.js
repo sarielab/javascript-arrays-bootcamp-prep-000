@@ -19,5 +19,5 @@ var removeElementFromEndOfArray = (arr) => arr.slice(-1)
 var destructivelyRemoveElementFromEndOfArray = (arr) => {
 // arr.pop()
 // return arr
-return arr.slice(-1)
+return arr
 }
