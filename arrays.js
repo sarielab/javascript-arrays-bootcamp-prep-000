@@ -1,11 +1,11 @@
-var chocolateBars = []
+var chocolateBars = ['snickers', 'hundred grand', 'kitkat', 'skittles']
+var addElementToBeginningOfArray = (arr, el) => [el, ...arr]
+var destructivelyAddElementToBeginningOfArray = (arr, el) => arr.unshift(el)
+var addElementToEndOfArray = (arr, el) => [...arr, el]
+
 /*
 ('arrays', () => {
-  describe('chocolateBars', () => {
-    it('is an array containing "snickers", "hundred grand", "kitkat", and "skittles"', () => {
-      expect(chocolateBars).to.eql['snickers', 'hundred grand', 'kitkat', 'skittles']
-    })
-  })
+  
 
   describe('addElementToBeginningOfArray(array, element)', () => {
     it('adds an element to the beginning of an array', () => {
