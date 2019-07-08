@@ -10,7 +10,10 @@ var destructivelyAddElementToEndOfArray = (arr, el) => {
   return arr
 }
 var accessElementInArray = (arr, el) => arr[el]
-var destructivelyRemoveElementFromBeginningOfArray = (arr) => arr.shift()
+var destructivelyRemoveElementFromBeginningOfArray = (arr) => {
+   arr.shift()
+   return arr
+}
 var removeElementFromBeginningOfArray = (arr) => arr.slice(1)
 var removeElementFromEndOfArray = (arr) => arr.slice(-1)
 var destructivelyRemoveElementFromEndOfArray = (arr) => {
